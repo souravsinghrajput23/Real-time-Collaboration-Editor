@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodeCast - Real-time Code Collaboration
 
 CodeCast is a real-time code collaboration web application that allows multiple users to collaborate on code in the same virtual room. It's built using the MERN (MongoDB, Express.js, React, Node.js) stack and Socket.IO for real-time communication.
@@ -50,3 +51,6 @@ If you want to run CodeCast locally or contribute to its development, follow the
    ```
    npm start
    ```
+=======
+# Real-time-Collaboration-Editor
+>>>>>>> 3c36744a41b60467bdbca9cc500a620482c14414
