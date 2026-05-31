@@ -1,56 +1,67 @@
-<<<<<<< HEAD
-# CodeCast - Real-time Code Collaboration
+# Real-Time Collaboration Editor
 
-CodeCast is a real-time code collaboration web application that allows multiple users to collaborate on code in the same virtual room. It's built using the MERN (MongoDB, Express.js, React, Node.js) stack and Socket.IO for real-time communication.
-
-## Live Demo
-
-You can try out CodeCast by visiting the [live demo](https://codecast-324z.onrender.com). Create or join a room and start collaborating with others in real time!
-### DEMO VIDEO
-https://github.com/Yadvendra016/CodeCast/assets/91756355/dadc9f09-ef24-4c73-aa43-223f7a817f9f
+A modern real-time collaborative code editor that enables multiple developers to write, edit, and review code together instantly from anywhere. The platform provides synchronized code editing, live user presence, room-based collaboration, and a seamless coding experience for remote teams, students, and developers.
 
 ## Features
 
-- Create or join a virtual "room" by entering a room ID.
-- Set your username to identify yourself in the room.
-- Real-time code collaboration with other users in the same room.
-- Changes made by one user are instantly reflected on all connected clients.
-- Code highlighting and editor customization options.
+* Real-time collaborative code editing
+* Multi-user room creation and joining
+* Instant code synchronization across connected users
+* Live user presence tracking
+* Syntax-highlighted code editor
+* Secure room-based collaboration
+* Responsive and modern user interface
+* Fast and reliable communication using WebSockets
 
-## Technologies Used
+## Tech Stack
 
-- Express.js: Handling API requests.
-- React: Building the front-end interface.
-- Node.js: Running the server.
-- Socket.IO: Enabling real-time communication.
-- uuid: Generating unique room IDs.
-- CodeMirror: Providing the code editor.
+### Frontend
 
-## Usage
+* React.js
+* HTML5
+* CSS3
+* JavaScript
 
-1. Open the [CodeCast live demo](https://codecast-324z.onrender.com).
-2. Enter a Room ID or generate a new one.
-3. Set your username.
-4. Start collaborating with others in the same room.
+### Backend
 
-## Development
+* Node.js
+* Express.js
 
-If you want to run CodeCast locally or contribute to its development, follow these steps:
+### Real-Time Communication
 
-1. Clone the repository:
+* Socket.IO
 
-   ```bash
-   git clone https://github.com/yourusername/codecast.git
-   cd codecast
-   ```
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the development server:
-   ```
-   npm start
-   ```
-=======
-# Real-time-Collaboration-Editor
->>>>>>> 3c36744a41b60467bdbca9cc500a620482c14414
+### Development Tools
+
+* Git
+* GitHub
+* npm
+
+## Use Cases
+
+* Pair programming
+* Technical interviews
+* Coding workshops
+* Online teaching and mentoring
+* Team-based software development
+* Collaborative problem solving
+
+## Installation
+
+1. Clone the repository.
+2. Install project dependencies.
+3. Configure environment variables if required.
+4. Start the backend server.
+5. Start the frontend application.
+6. Open the application in your browser and begin collaborating.
+
+## Future Enhancements
+
+* Integrated code compilation and execution
+* Video and voice communication
+* Shared terminal support
+* File management system
+* Authentication and user profiles
+* Collaborative whiteboard
+* Project workspace management
+* AI-powered coding assistance
