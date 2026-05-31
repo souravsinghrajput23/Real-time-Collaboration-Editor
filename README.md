@@ -1,67 +1,99 @@
 # Real-Time Collaboration Editor
 
-A modern real-time collaborative code editor that enables multiple developers to write, edit, and review code together instantly from anywhere. The platform provides synchronized code editing, live user presence, room-based collaboration, and a seamless coding experience for remote teams, students, and developers.
+A modern real-time collaborative code editor that enables multiple users to write, edit, and review code together in shared rooms. Built with React, Node.js, Express, and Socket.IO, the application delivers instant code synchronization and a seamless collaborative coding experience.
 
-## Features
+## 🚀 Live Demo
 
-* Real-time collaborative code editing
-* Multi-user room creation and joining
-* Instant code synchronization across connected users
-* Live user presence tracking
-* Syntax-highlighted code editor
-* Secure room-based collaboration
-* Responsive and modern user interface
-* Fast and reliable communication using WebSockets
+**Frontend:** https://real-time-collaboration-editor.vercel.app
 
-## Tech Stack
+**Backend API:** https://real-time-collaboration-editor-uz13.onrender.com
+
+## ✨ Features
+
+* Real-time code collaboration
+* Room-based coding sessions
+* Live code synchronization
+* Multi-user support
+* Clean and responsive interface
+* Code execution support
+* Fast and interactive user experience
+
+## 🛠️ Tech Stack
 
 ### Frontend
 
 * React.js
-* HTML5
-* CSS3
-* JavaScript
+* Axios
+* Socket.IO Client
+* CSS
 
 ### Backend
 
 * Node.js
 * Express.js
-
-### Real-Time Communication
-
 * Socket.IO
+* Axios
 
-### Development Tools
+### Deployment
 
-* Git
-* GitHub
-* npm
+* Vercel (Frontend)
+* Render (Backend)
 
-## Use Cases
+## 📂 Project Structure
 
-* Pair programming
-* Technical interviews
-* Coding workshops
-* Online teaching and mentoring
-* Team-based software development
-* Collaborative problem solving
+```text
+Real-time-Collaboration-Editor/
+├── client/
+│   ├── src/
+│   └── public/
+└── server/
+    ├── index.js
+    └── package.json
+```
 
-## Installation
+## ⚙️ Installation
 
-1. Clone the repository.
-2. Install project dependencies.
-3. Configure environment variables if required.
-4. Start the backend server.
-5. Start the frontend application.
-6. Open the application in your browser and begin collaborating.
+### Clone the Repository
 
-## Future Enhancements
+```bash
+git clone https://github.com/souravsinghrajput23/Real-time-Collaboration-Editor.git
+cd Real-time-Collaboration-Editor
+```
 
-* Integrated code compilation and execution
-* Video and voice communication
-* Shared terminal support
-* File management system
-* Authentication and user profiles
-* Collaborative whiteboard
-* Project workspace management
-* AI-powered coding assistance
+### Frontend Setup
+
+```bash
+cd client
+npm install
+npm start
+```
+
+### Backend Setup
+
+```bash
+cd server
+npm install
+npm start
+```
+
+## 🎯 Key Highlights
+
+* Implemented WebSocket-based communication using Socket.IO.
+* Built a scalable room-based architecture for collaborative coding.
+* Designed a responsive and intuitive user interface.
+* Deployed production-ready frontend and backend services.
+
+## 🔮 Future Improvements
+
+* User Authentication
+* Multiple File Support
+* In-Room Chat System
+* Voice & Video Collaboration
+* AI Coding Assistant
+* Project Saving & Sharing
+
+## 👨‍💻 Author
+
+**Sourav Singh**
+
+GitHub: https://github.com/souravsinghrajput23
