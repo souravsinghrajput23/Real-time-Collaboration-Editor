@@ -33,9 +33,17 @@ app.use(cors());
 // Parse JSON bodies
 app.use(express.json());
 
+// Health check route
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://real-time-collaboration-editor.vercel.app",
+    ],
     methods: ["GET", "POST"],
   },
 });
