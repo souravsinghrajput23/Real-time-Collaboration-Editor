@@ -18,20 +18,17 @@ function Home() {
 
   const joinRoom = () => {
     if (!roomId || !username) {
-      toast.error("Both the field is requried");
+      toast.error("Both fields are required");
       return;
     }
 
-    // redirect
     navigate(`/editor/${roomId}`, {
-      state: {
-        username,
-      },
+      state: { username },
     });
-    toast.success("room is created");
+
+    toast.success("Joining room...");
   };
 
-  // when enter then also join
   const handleInputEnter = (e) => {
     if (e.code === "Enter") {
       joinRoom();
@@ -39,58 +36,89 @@ function Home() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row justify-content-center align-items-center min-vh-100">
-        <div className="col-12 col-md-6">
-          <div className="card shadow-sm p-2 mb-5 bg-secondary rounded">
-            <div className="card-body text-center bg-dark">
-              <img
-                src="/images/codecast.png"
-                alt="Logo"
-                className="img-fluid mx-auto d-block"
-                style={{ maxWidth: "150px" }}
-              />
-              <h4 className="card-title text-light mb-4">Enter the ROOM ID</h4>
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background:
+          "radial-gradient(circle at top, #0f172a, #020617 60%, #000000)",
+        fontFamily: "Arial",
+        padding: "20px",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "420px",
+          padding: "30px",
+          borderRadius: "18px",
+          background: "rgba(255,255,255,0.06)",
+          backdropFilter: "blur(20px)",
+          border: "1px solid rgba(255,255,255,0.1)",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
+          textAlign: "center",
+        }}
+      >
+        {/* Logo */}
+        <img
+          src="/images/DevCode.png"
+          alt="Logo"
+          style={{
+            width: "110px",
+            marginBottom: "10px",
+          }}
+        />
 
-              <div className="form-group">
-                <input
-                  type="text"
-                  value={roomId}
-                  onChange={(e) => setRoomId(e.target.value)}
-                  className="form-control mb-2"
-                  placeholder="ROOM ID"
-                  onKeyUp={handleInputEnter}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  className="form-control mb-2"
-                  placeholder="USERNAME"
-                  onKeyUp={handleInputEnter}
-                />
-              </div>
-              <button
-                onClick={joinRoom}
-                className="btn btn-success btn-lg btn-block"
-              >
-                JOIN
-              </button>
-              <p className="mt-3 text-light">
-                Don't have a room ID? create{" "}
-                <span
-                  onClick={generateRoomId}
-                  className=" text-success p-2"
-                  style={{ cursor: "pointer" }}
-                >
-                  {" "}
-                  New Room
-                </span>
-              </p>
-            </div>
-          </div>
+        {/* Title */}
+        <h2 style={{ color: "white", marginBottom: "5px" }}>
+          Join a Coding Room
+        </h2>
+
+        <p style={{ color: "#94a3b8", fontSize: "13px", marginBottom: "20px" }}>
+          Collaborate in real-time with your friends 🚀
+        </p>
+
+        {/* ROOM ID */}
+        <input
+          type="text"
+          value={roomId}
+          onChange={(e) => setRoomId(e.target.value)}
+          placeholder="Enter Room ID"
+          onKeyUp={handleInputEnter}
+          style={inputStyle}
+        />
+
+        {/* USERNAME */}
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter Username"
+          onKeyUp={handleInputEnter}
+          style={inputStyle}
+        />
+
+        {/* JOIN BUTTON */}
+        <button onClick={joinRoom} style={joinBtn}>
+          🚀 Join Room
+        </button>
+
+        {/* CREATE ROOM */}
+        <div style={{ marginTop: "15px", fontSize: "13px", color: "#94a3b8" }}>
+          Don’t have a room?
+          <span
+            onClick={generateRoomId}
+            style={{
+              color: "#38bdf8",
+              cursor: "pointer",
+              marginLeft: "5px",
+              fontWeight: "bold",
+            }}
+          >
+            Create new room
+          </span>
         </div>
       </div>
     </div>
@@ -98,3 +126,30 @@ function Home() {
 }
 
 export default Home;
+
+/* ---------- STYLES ---------- */
+
+const inputStyle = {
+  width: "100%",
+  padding: "12px",
+  marginBottom: "12px",
+  borderRadius: "10px",
+  border: "1px solid rgba(255,255,255,0.15)",
+  outline: "none",
+  background: "rgba(0,0,0,0.3)",
+  color: "white",
+  fontSize: "14px",
+};
+
+const joinBtn = {
+  width: "100%",
+  padding: "12px",
+  borderRadius: "10px",
+  border: "none",
+  cursor: "pointer",
+  fontWeight: "bold",
+  fontSize: "15px",
+  color: "white",
+  background: "linear-gradient(90deg, #22c55e, #16a34a)",
+  boxShadow: "0 10px 25px rgba(34,197,94,0.3)",
+};
